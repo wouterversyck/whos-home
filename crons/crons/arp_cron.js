@@ -3,7 +3,7 @@ const arpScanner = require('arpscan/promise');
 
 const job = new CronJob('0 */5 * * * *', function() {
     const d = new Date();
-    console.log('At Ten Minutes:', d);
+    console.log('Performing arpscan at: ', d);
 
     arpScanner({sudo: true}).then((data) => {
         console.log(data);
