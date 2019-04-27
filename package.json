@@ -6,6 +6,8 @@
     "start-build": "node dist/bin/www",
     "start-src": "src/bin/www",
     "build": "babel --presets es2015 -d dist/ src --copy-files",
+    "prettier": "prettier --write src/**/*.js",
+    "prettier-watch": "onchange 'src/**/*.js' -- prettier --write {{changed}}"
   },
   "dependencies": {
     "arpscan": "^1.0.2",
@@ -20,5 +22,6 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "prettier": "^1.17.0"
   }
 }
