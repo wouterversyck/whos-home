@@ -1,5 +1,5 @@
-const arp = require('./crons/arp_cron');
-const test = require('./crons/test_cron');
+import arp from './crons/arp_cron';
+import test from './crons/test_cron';
 
 module.exports = {
     start: ()=> {

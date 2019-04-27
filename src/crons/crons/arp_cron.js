@@ -1,5 +1,5 @@
-const CronJob = require('cron').CronJob;
-const arpScanner = require('arpscan/promise');
+import { CronJob } from 'cron';
+import arpScanner from 'arpscan/promise';
 
 const job = new CronJob('0 */5 * * * *', function() {
     const d = new Date();
