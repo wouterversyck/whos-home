@@ -2,12 +2,15 @@ import express from 'express';
 const router = express.Router();
 
 /* GET home page. */
-router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' });
+router.get('/', (request, response, next) => {
+  response.render('index', { title: 'Express' });
 });
 
-router.post('/ghome', (req, res, nex) => {
-  console.log(req);
+router.post('/ghome', (request, response, next) => {
+  console.log(request.body);
+  if ('raspberry' === request.body.message) {
+    exec('sense_heart');
+  }
 });
 
 module.exports = router;

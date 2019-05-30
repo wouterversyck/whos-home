@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start-build": "node dist/bin/www",
-    "start-src": "src/bin/www",
+    "start-src": "node src/bin/www",
     "build": "babel --presets es2015 -d dist/ src --copy-files",
     "prettier": "prettier --write src/**/*.js",
     "prettier-watch": "onchange 'src/**/*.js' -- prettier --write {{changed}}"
